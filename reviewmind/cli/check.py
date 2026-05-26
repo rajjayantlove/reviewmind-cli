@@ -7,15 +7,15 @@ from pathlib import Path
 import requests
 import typer
 
-from cli.reviewmind.cache import (
+from reviewmind.cli.cache import (
     flush_violations,
     get_cached_data,
     queue_violation,
     save_cached_data,
 )
-from cli.reviewmind.config import get_token
-from cli.reviewmind.setup import get_git_repo_name
-from reviewmind_engine import AnalysisEngine, EngineRule
+from reviewmind.cli.config import get_token
+from reviewmind.cli.setup import get_git_repo_name
+from reviewmind.engine import AnalysisEngine, EngineRule
 
 API_BASE_URL = os.getenv("REVIEWMIND_API_URL", "http://localhost:8080/api")
 

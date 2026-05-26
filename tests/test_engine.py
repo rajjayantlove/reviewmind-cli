@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock
 
-from reviewmind_engine.analysis_engine import AnalysisEngine
-from reviewmind_engine.finding import Finding
+from reviewmind.engine.analysis_engine import AnalysisEngine
+from reviewmind.engine.finding import Finding
 
 
 def make_rule(
@@ -113,7 +113,7 @@ def test_finding_fingerprint_is_stable():
 
 
 def test_regex_evaluator_detects_violation():
-    from reviewmind_engine.evaluators.regex_evaluator import RegexRuleEvaluator
+    from reviewmind.engine.evaluators.regex_evaluator import RegexRuleEvaluator
 
     rule = make_rule(check_type="regex", check_pattern=r"eval\(")
     ev = RegexRuleEvaluator(rule)
@@ -128,7 +128,7 @@ def test_regex_evaluator_detects_violation():
 
 
 def test_regex_evaluator_skips_non_added_lines():
-    from reviewmind_engine.evaluators.regex_evaluator import RegexRuleEvaluator
+    from reviewmind.engine.evaluators.regex_evaluator import RegexRuleEvaluator
 
     rule = make_rule(check_type="regex", check_pattern=r"eval\(")
     ev = RegexRuleEvaluator(rule)
@@ -141,7 +141,7 @@ def test_regex_evaluator_skips_non_added_lines():
 
 
 def test_regex_evaluator_no_match():
-    from reviewmind_engine.evaluators.regex_evaluator import RegexRuleEvaluator
+    from reviewmind.engine.evaluators.regex_evaluator import RegexRuleEvaluator
 
     rule = make_rule(check_type="regex", check_pattern=r"eval\(")
     ev = RegexRuleEvaluator(rule)
@@ -161,7 +161,7 @@ def test_regex_evaluator_no_match():
 def test_python_ast_evaluator_detects_eval():
     import ast
 
-    from reviewmind_engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
+    from reviewmind.engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
 
     rule = make_rule(
         check_type="ast",
@@ -186,7 +186,7 @@ def test_python_ast_evaluator_detects_eval():
 def test_python_ast_evaluator_skips_non_added_lines():
     import ast
 
-    from reviewmind_engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
+    from reviewmind.engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
 
     rule = make_rule(check_type="ast", check_pattern="eval", supports_ast=True)
     ev = PythonASTRuleEvaluator(rule)

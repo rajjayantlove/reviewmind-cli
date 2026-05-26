@@ -1,7 +1,7 @@
-from reviewmind_engine.evaluators.base import RuleEvaluator
-from reviewmind_engine.evaluators.js_ast_evaluator import JavaScriptASTRuleEvaluator
-from reviewmind_engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
-from reviewmind_engine.evaluators.regex_evaluator import RegexRuleEvaluator
+from reviewmind.engine.evaluators.base import RuleEvaluator
+from reviewmind.engine.evaluators.js_ast_evaluator import JavaScriptASTRuleEvaluator
+from reviewmind.engine.evaluators.python_ast_evaluator import PythonASTRuleEvaluator
+from reviewmind.engine.evaluators.regex_evaluator import RegexRuleEvaluator
 
 
 def get_evaluator(rule) -> RuleEvaluator:

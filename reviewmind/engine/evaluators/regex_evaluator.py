@@ -1,7 +1,7 @@
 import re
 
-from reviewmind_engine.evaluators.base import RuleEvaluator
-from reviewmind_engine.finding import Finding
+from reviewmind.engine.evaluators.base import RuleEvaluator
+from reviewmind.engine.finding import Finding
 
 
 class RegexRuleEvaluator(RuleEvaluator):

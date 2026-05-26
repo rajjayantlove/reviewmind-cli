@@ -9,7 +9,7 @@ Why this exists:
   rule object to EngineRule first.
 
 Usage in private backend:
-    from reviewmind_engine.engine_rule import EngineRule
+    from reviewmind.engine.engine_rule import EngineRule
     engine_rules = [EngineRule.from_orm(r) for r in active_rules]
     findings = engine.run_scan(files, rules=engine_rules)
 

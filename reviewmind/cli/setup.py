@@ -4,7 +4,7 @@ from pathlib import Path
 
 import typer
 
-from cli.reviewmind.config import get_token
+from reviewmind.cli.config import get_token
 
 HOOK_SCRIPT = """#!/usr/bin/env bash
 

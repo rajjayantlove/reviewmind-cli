@@ -1,5 +1,5 @@
-from reviewmind_engine.engine_rule import EngineRule
-from reviewmind_engine.finding import Finding
+from reviewmind.engine.engine_rule import EngineRule
+from reviewmind.engine.finding import Finding
 
 
 def generate_sarif_report(active_rules: list[EngineRule], findings: list[Finding]) -> dict:

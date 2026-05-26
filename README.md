@@ -105,8 +105,7 @@ This repository contains the **core scanning engine** used by both:
 ### Using the engine directly
 
 ```python
-from reviewmind_engine import AnalysisEngine
-from reviewmind_engine.engine_rule import EngineRule
+from reviewmind import AnalysisEngine, EngineRule
 
 rules = [
     EngineRule(

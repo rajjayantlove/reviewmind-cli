@@ -40,7 +40,7 @@ dev = [
 ]
 
 [project.scripts]
-reviewmind = "cli.reviewmind.main:app"
+reviewmind = "reviewmind.cli.main:app"
 
 [project.urls]
 Homepage = "https://reviewmind.ai"
@@ -50,7 +50,7 @@ Documentation = "https://docs.reviewmind.ai"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["reviewmind_engine*", "cli*"]
+include = ["reviewmind*"]
 
 [tool.black]
 line-length = 100
@@ -62,4 +62,5 @@ select = ["E", "F", "I"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-v --cov=reviewmind_engine --cov-report=term-missing"
+addopts = "-v --cov=reviewmind --cov-report=term-missing"
+

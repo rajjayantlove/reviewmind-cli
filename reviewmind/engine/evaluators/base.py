@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
-from reviewmind_engine.finding import Finding
+from reviewmind.engine.finding import Finding
 
 
 class RuleEvaluator(ABC):

@@ -1,6 +1,6 @@
 import typer
 
-from cli.reviewmind import check, config, setup
+from reviewmind.cli import check, config, setup
 
 app = typer.Typer(help="ReviewMind CLI to enforce AI-extracted PR rules")
 

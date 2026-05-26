@@ -1,8 +1,8 @@
 import ast
 import logging
 
-from reviewmind_engine.evaluators import get_evaluator
-from reviewmind_engine.finding import Finding
+from reviewmind.engine.evaluators import get_evaluator
+from reviewmind.engine.finding import Finding
 
 logger = logging.getLogger(__name__)
 
